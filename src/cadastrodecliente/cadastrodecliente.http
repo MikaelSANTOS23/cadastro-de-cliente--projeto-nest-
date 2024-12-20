@@ -1,0 +1,21 @@
+### listar cadastro de cliente
+GET http://local:3000/cadastrodecliente
+
+### get cadastro de cliente
+GET http://localhost:3000/cadastrodecliente/3
+
+### criar cadastro de cliente
+POST http://localhost:3000/cadastrodecliente
+Content-Type: application/json
+
+{
+    "name": "Mikael Santos",
+    "email": "santos.mikael@gmail.com",
+    "phonenumber": "81900000000",
+}
+
+### update cadastro de cliente
+PATCH http://localhost:3000/cadastrodecliente/3
+
+### deletar cadastro de cliente
+DELETE https://localhost:3000/cadastrodecliente/3
