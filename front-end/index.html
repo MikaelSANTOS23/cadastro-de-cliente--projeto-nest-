@@ -25,14 +25,34 @@
 
             }
         </script>
-        
+       <style>
+         body {
+            margin: 1;
+            display: flex;
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 80vh; /* Altura total da página */
+            background: radial-gradient(circle, #dfdfdf, #295661);
+        }
+       
+       
+        img {
+            max-width: 30%; /* Garante que a imagem não exceda o tamanho da tela */
+            height: auto; /* Mantém a proporção da imagem */
+            border: 0px solid #17377c; /* Opcional: borda ao redor da imagem */
+            border-radius: 10px; /* Opcional: bordas arredondadas */
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+       </style> 
     </head>
      
     <body bgcolor="#4682B4">
-        <p>
-        <h1> Cadastro de cliente</h1>
-       </p>
+        
+        <img src="https://th.bing.com/th/id/R.4a035a7a2d7f52e2159d0d5fcd417c2a?rik=qP1qZ7NPclAfgQ&pid=ImgRaw&r=0">
+        
         <form id="form-cadastro">
+            <h1> Cadastro de Cliente </h1>
             <b>
            <div>
             <label for="nome">Nome:</label>
