@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <heade>
+    <head>
         <meta charset="UTF-8">
-        <meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>
             Cadastro de Cliente
         </title>
@@ -25,27 +25,45 @@
 
             }
         </script>
-    </heade>
-    <body>
+        
+    </head>
+     
+    <body bgcolor="#4682B4">
+        <p>
         <h1> Cadastro de cliente</h1>
+       </p>
         <form id="form-cadastro">
+            <b>
            <div>
             <label for="nome">Nome:</label>
             <input type="nome" id="nome" name="nome" required>
            </div>
-           
+            </b>
+
+           <p>
+            <b>
             <div>
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-            
+            </b>
+           </p>
+
+           <P>
+            <b>
             <div>
                 <label for="phonenumber">Numero do telefone:</label>
                 <input type="phonenumber" id="phonenumber" name="phonenumber" required>
             </div>
+            </b>
+           </P>
+           
+           <p>
             <div>
                 <button type="button" onclick="cadastrarCliente()">Cadastrar Cliente</button>
             </div>
+            </p>
         </form>
+        
     </body>
 </html>
