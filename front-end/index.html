@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="api.py">
         <title>
             Cadastro de Cliente
         </title>
@@ -50,9 +51,16 @@
     <body bgcolor="#4682B4">
         
         <img src="https://th.bing.com/th/id/R.4a035a7a2d7f52e2159d0d5fcd417c2a?rik=qP1qZ7NPclAfgQ&pid=ImgRaw&r=0">
-        
-        <form id="form-cadastro">
+            
+        <form action="/cadastrarCliente" method="post">
             <h1> Cadastro de Cliente </h1>
+            {% with menssages = get_flashed_messages() %}
+            {% if menssages %}
+            {% for menssage in menssages %}
+            <div>{{ menssage }}</div>
+            {% endfor %}
+            {% endif %}
+            {% endwith %}
             <b>
            <div>
             <label for="nome">Nome:</label>

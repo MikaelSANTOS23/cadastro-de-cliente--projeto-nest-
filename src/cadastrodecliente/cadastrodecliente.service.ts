@@ -1,10 +1,12 @@
 import { Injectable } from '@nestjs/common';
 import { CreateCadastrodeclienteDto } from './dto/create-cadastrodecliente.dto';
 import { UpdateCadastrodeclienteDto } from './dto/update-cadastrodecliente.dto';
+import { promises } from 'dns';
 
 @Injectable()
 export class CadastrodeclienteService {
   create(createCadastrodeclienteDto: CreateCadastrodeclienteDto) {
+    
     return 'This action adds a new cadastrodecliente';
   }
 
