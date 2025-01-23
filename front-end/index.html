@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="api.py">
+        <link rel="stylesheet" href="cadastrodecliente.http">
         <title>
             Cadastro de Cliente
         </title>
@@ -11,7 +12,7 @@
             async function cadastrarCliente(){
                 const name = document.getElementById('name').value;
                 const email = document.getElementById('email').value;
-                const phonenumber = document.getElementById('phonenumber').value;
+                const phonenumber = document.getElementById('phone').value;
 
                 const response = await fetch('http://localhost:3000/cadastrodeclientes', {
                     method: 'POST',
@@ -33,37 +34,31 @@
             justify-content: center; /* Centraliza horizontalmente */
             align-items: center; /* Centraliza verticalmente */
             height: 80vh; /* Altura total da página */
-            background: radial-gradient(circle, #dfdfdf, #295661);
+            background: radial-gradient(circle, #798630, #267516);
         }
        
        
         img {
-            max-width: 30%; /* Garante que a imagem não exceda o tamanho da tela */
-            height: auto; /* Mantém a proporção da imagem */
+            max-width: 194px; /* Garante que a imagem não exceda o tamanho da tela */
+             /* Mantém a proporção da imagem */
             border: 0px solid #17377c; /* Opcional: borda ao redor da imagem */
             border-radius: 10px; /* Opcional: bordas arredondadas */
             padding-left: 20px;
             padding-right: 20px;
         }
+
        </style> 
     </head>
      
     <body bgcolor="#4682B4">
         
-        <img src="https://th.bing.com/th/id/R.4a035a7a2d7f52e2159d0d5fcd417c2a?rik=qP1qZ7NPclAfgQ&pid=ImgRaw&r=0">
+        <img src="https://i.pinimg.com/736x/71/4c/60/714c60054dc4a398eb9ac66f432d7007.jpg">
             
         <form action="/cadastrarCliente" method="post">
-            <h1> Cadastro de Cliente </h1>
-            {% with menssages = get_flashed_messages() %}
-            {% if menssages %}
-            {% for menssage in menssages %}
-            <div>{{ menssage }}</div>
-            {% endfor %}
-            {% endif %}
-            {% endwith %}
+            <h1 style="color:#012000", > Cadastro de Cliente </h1>
             <b>
            <div>
-            <label for="nome">Nome:</label>
+            <label for="nome" style="color:#312d05" >Nome:</label>
             <input type="nome" id="nome" name="nome" required>
            </div>
             </b>
@@ -71,7 +66,7 @@
            <p>
             <b>
             <div>
-                <label for="email">Email:</label>
+                <label for="email" style="color:#312d05">Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
             </b>
@@ -80,15 +75,15 @@
            <P>
             <b>
             <div>
-                <label for="phonenumber">Numero do telefone:</label>
-                <input type="phonenumber" id="phonenumber" name="phonenumber" required>
+                <label for="phone" style="color:#312d05">Telefone:</label>
+                <input type="phone" id="phone" name="phone" required>
             </div>
             </b>
            </P>
            
            <p>
             <div>
-                <button type="button" onclick="cadastrarCliente()">Cadastrar Cliente</button>
+                <button type ="button" onclick="cadastrarCliente()" >Enviar</button>
             </div>
             </p>
         </form>
