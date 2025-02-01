@@ -9,3 +9,5 @@ import { CadastrodeclienteModule } from './cadastrodecliente/cadastrodecliente.m
   providers: [AppService],
 })
 export class AppModule {}
+
+
