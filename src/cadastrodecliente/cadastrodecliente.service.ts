@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateCadastrodeclienteDto } from './dto/create-cadastrodecliente.dto';
 import { UpdateCadastrodeclienteDto } from './dto/update-cadastrodecliente.dto';
 import { promises } from 'dns';
+import { Express } from 'express';
 
 @Injectable()
 export class CadastrodeclienteService {
