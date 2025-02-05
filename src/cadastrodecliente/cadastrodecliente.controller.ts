@@ -3,17 +3,22 @@ import { CadastrodeclienteService } from './cadastrodecliente.service';
 import { CreateCadastrodeclienteDto } from './dto/create-cadastrodecliente.dto';
 import { UpdateCadastrodeclienteDto } from './dto/update-cadastrodecliente.dto';
 
+
 @Controller('cadastrodecliente')
 export class CadastrodeclienteController {
   constructor(private readonly cadastrodeclienteService: CadastrodeclienteService) {}
 
   @Post()
   create(@Body() createCadastrodeclienteDto: CreateCadastrodeclienteDto) {
-    return this.cadastrodeclienteService.create(createCadastrodeclienteDto);
+     console.log(createCadastrodeclienteDto)     
+      this.cadastrodeclienteService.create('cadastrodecliente');
+     return this.cadastrodeclienteService.create(createCadastrodeclienteDto);
+       
   }
 
-  @Get()
-  findAll() {
+  @Get('./:id/:name')
+  findById(@Param('id')id:string) {
+    console.log(id)
     return this.cadastrodeclienteService.findAll();
   }
 

@@ -1,5 +1,6 @@
-import { Test, TestingModule } from '@nestjs/testing';
+import { Test, TestingModule } from "@nestjs/testing";
 import { CadastrodeclienteService } from './cadastrodecliente.service';
+import { Injectable } from '@nestjs/common';
 
 describe('CadastrodeclienteService', () => {
   let service: CadastrodeclienteService;
